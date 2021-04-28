@@ -1,0 +1,33 @@
+<Window x:Class="t5wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:t5wpf"
+        mc:Ignorable="d"
+        Title="MainWindow">
+    <Grid>
+        <StackPanel Height="309" Margin="21,10,11,0" Width="485">
+            <Label x:Name="label" Content="impo mess"/>
+            <Button x:Name="button" Content="pushbut" Height="50" Click="butclicked" Margin="8,0"/>
+            <ListBox x:Name="listBox" Height="100">
+                <ListBoxItem>
+                    <TextBox x:Name="itm1" Height="23" TextWrapping="Wrap" Text="click list >" Width="120"/>
+                </ListBoxItem>
+            </ListBox>
+            <ListView Margin="20" Name="lvUsers" SelectionMode="Multiple"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.CanContentScroll="True"
+                      Height="100">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Age" Width="40" DisplayMemberBinding="{Binding Age}" />
+                        <GridViewColumn Header="Cost" Width="40" DisplayMemberBinding="{Binding Cost}" />
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Window>
