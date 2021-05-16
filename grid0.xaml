@@ -15,7 +15,7 @@
                     <TextBox x:Name="itm1" Height="23" TextWrapping="Wrap" Text="click list >" Width="120"/>
                 </ListBoxItem>
             </ListBox>
-            <ListView Margin="20" Name="lvUsers" SelectionMode="Multiple"
+            <ListView Margin="20" x:Name="lvUsers" SelectionMode="Multiple"
                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                       ScrollViewer.CanContentScroll="True"
                       Height="100">
